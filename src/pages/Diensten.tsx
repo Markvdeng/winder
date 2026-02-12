@@ -1,6 +1,7 @@
 import PageHeader from "@/components/PageHeader";
 import ServiceCard from "@/components/ServiceCard";
 import { services } from "@/data/content";
+import { images } from "@/data/images";
 
 export default function Diensten() {
   const kraanDiensten = services.filter((s) =>
@@ -26,6 +27,7 @@ export default function Diensten() {
         title="Onze Diensten"
         subtitle="Van kraanverhuur tot transport, van werkvoorbereiding tot opslag. Winder biedt een compleet pakket aan diensten voor uw project."
         breadcrumbs={[{ label: "Diensten" }]}
+        backgroundImage={images.aerialDrone}
       />
 
       <section className="py-16">

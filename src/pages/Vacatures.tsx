@@ -2,6 +2,7 @@ import { Link } from "react-router-dom";
 import { MapPin, Clock, CheckCircle } from "lucide-react";
 import PageHeader from "@/components/PageHeader";
 import { vacatures } from "@/data/content";
+import { images } from "@/data/images";
 
 export default function Vacatures() {
   return (
@@ -10,6 +11,7 @@ export default function Vacatures() {
         title="Vacatures"
         subtitle="Wil jij werken bij een dynamisch familiebedrijf met meer dan 125 jaar ervaring? Bekijk onze openstaande vacatures en solliciteer direct."
         breadcrumbs={[{ label: "Vacatures" }]}
+        backgroundImage={images.vacatures.heroBg}
       />
 
       <section className="py-16">

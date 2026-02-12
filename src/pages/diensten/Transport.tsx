@@ -4,6 +4,7 @@ export default function Transport() {
   return (
     <ServicePage
       slug="transport"
+      headerBg="/images/transport/hero-bg.jpg"
       extraContent={
         <section className="py-16 bg-winder-gray">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -16,29 +17,36 @@ export default function Transport() {
                   title: "Trekker-oplegger",
                   description:
                     "Meer dan 50 trekkers met diverse opleggers: schuifzeilen, vlakke trailers, diepladers en meer.",
+                  image: "/images/gallery/07.jpg",
                 },
                 {
                   title: "Bakwagens",
                   description:
                     "Voor kleinere zendingen en stadsdistributie beschikken wij over bakwagens met laadklep.",
+                  image: "/images/services/pakketdienst.jpg",
                 },
                 {
                   title: "Speciaal transport",
                   description:
                     "Voor buitenmaatse ladingen hebben wij speciaal materieel zoals uitschuifbare trailers en diepladers.",
+                  image: "/images/services/chalet-transport.jpg",
                 },
               ].map((item) => (
                 <div
                   key={item.title}
-                  className="bg-white border border-gray-200 rounded-lg p-6"
+                  className="bg-white border border-gray-200 rounded-lg overflow-hidden"
                 >
-                  <div className="bg-gray-100 h-40 rounded-lg mb-4 flex items-center justify-center">
-                    <span className="text-gray-400 text-sm">
-                      Foto placeholder
-                    </span>
+                  <div className="h-40 overflow-hidden">
+                    <img
+                      src={item.image}
+                      alt={item.title}
+                      className="w-full h-full object-cover"
+                    />
                   </div>
-                  <h3 className="font-heading text-xl mb-2">{item.title}</h3>
-                  <p className="text-sm text-gray-600">{item.description}</p>
+                  <div className="p-6">
+                    <h3 className="font-heading text-xl mb-2">{item.title}</h3>
+                    <p className="text-sm text-gray-600">{item.description}</p>
+                  </div>
                 </div>
               ))}
             </div>

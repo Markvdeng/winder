@@ -2,6 +2,7 @@ import { Link } from "react-router-dom";
 import { ArrowRight, Award, Shield, Users, Wrench } from "lucide-react";
 import PageHeader from "@/components/PageHeader";
 import { about, company } from "@/data/content";
+import { images } from "@/data/images";
 
 const valueIcons = [Shield, Wrench, Award, Users];
 
@@ -12,6 +13,7 @@ export default function OverOns() {
         title="Over Winder"
         subtitle={about.intro}
         breadcrumbs={[{ label: "Over Ons" }]}
+        backgroundImage={images.about.heroBg}
       />
 
       {/* Values */}
@@ -42,8 +44,12 @@ export default function OverOns() {
       <section className="py-16 bg-winder-gray">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-            <div className="bg-gray-200 rounded-lg h-80 flex items-center justify-center">
-              <span className="text-gray-400">Bedrijfsfoto placeholder</span>
+            <div className="rounded-lg h-80 overflow-hidden">
+              <img
+                src={images.about.team2}
+                alt="Winder team"
+                className="w-full h-full object-cover"
+              />
             </div>
             <div>
               <h2 className="font-heading text-3xl mb-6">

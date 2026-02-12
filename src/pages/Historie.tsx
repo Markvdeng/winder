@@ -1,5 +1,6 @@
 import PageHeader from "@/components/PageHeader";
 import { history } from "@/data/content";
+import { images } from "@/data/images";
 
 export default function Historie() {
   return (
@@ -11,6 +12,7 @@ export default function Historie() {
           { label: "Over Ons", to: "/over-ons" },
           { label: "Historie" },
         ]}
+        backgroundImage={images.historie.heroBg}
       />
 
       <section className="py-16">
@@ -60,14 +62,21 @@ export default function Historie() {
             Door de jaren heen
           </h2>
           <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
-            {[1, 2, 3, 4].map((n) => (
+            {[
+              images.historie.vintage,
+              images.historie.photo1,
+              images.about.team1,
+              images.aerialDrone,
+            ].map((src, i) => (
               <div
-                key={n}
-                className="bg-gray-200 rounded-lg aspect-square flex items-center justify-center"
+                key={i}
+                className="rounded-lg aspect-square overflow-hidden"
               >
-                <span className="text-gray-400 text-sm">
-                  Historische foto {n}
-                </span>
+                <img
+                  src={src}
+                  alt={`Historische foto ${i + 1}`}
+                  className="w-full h-full object-cover"
+                />
               </div>
             ))}
           </div>

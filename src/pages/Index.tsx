@@ -4,6 +4,7 @@ import Hero from "@/components/Hero";
 import ServiceCard from "@/components/ServiceCard";
 import LocationCard from "@/components/LocationCard";
 import { services, locations, company } from "@/data/content";
+import { images } from "@/data/images";
 
 const stats = [
   { icon: Users, label: "Medewerkers", value: company.employees },
@@ -21,6 +22,7 @@ export default function Index() {
         ctaText="Bekijk onze diensten"
         ctaLink="/diensten"
         secondaryCta={{ text: "Neem contact op", link: "/contact" }}
+        backgroundImage={images.heroHomepage}
       />
 
       {/* Stats bar */}
@@ -98,8 +100,12 @@ export default function Index() {
                 <ArrowRight className="w-4 h-4" />
               </Link>
             </div>
-            <div className="bg-gray-100 rounded-lg h-80 flex items-center justify-center">
-              <span className="text-gray-400">Bedrijfsfoto placeholder</span>
+            <div className="rounded-lg h-80 overflow-hidden">
+              <img
+                src={images.about.team1}
+                alt="Winder team"
+                className="w-full h-full object-cover"
+              />
             </div>
           </div>
         </div>

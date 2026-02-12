@@ -2,7 +2,15 @@ import { Link } from "react-router-dom";
 import PageHeader from "@/components/PageHeader";
 import CraneSpecCard from "@/components/CraneSpecCard";
 import { services, craneSpecs } from "@/data/content";
+import { images } from "@/data/images";
 import { CheckCircle } from "lucide-react";
+
+const craneImages = [
+  images.torenkranen["38m"],
+  images.torenkranen["44m"],
+  images.torenkranen["48m"],
+  images.torenkranen["60m"],
+];
 
 export default function MobieleTorenkranen() {
   const service = services.find((s) => s.slug === "mobiele-torenkranen")!;
@@ -16,6 +24,7 @@ export default function MobieleTorenkranen() {
           { label: "Diensten", to: "/diensten" },
           { label: service.title },
         ]}
+        backgroundImage={images.torenkraanHero}
       />
 
       {/* Features */}
@@ -41,10 +50,12 @@ export default function MobieleTorenkranen() {
                 Offerte aanvragen
               </Link>
             </div>
-            <div className="bg-gray-100 rounded-lg h-80 flex items-center justify-center">
-              <span className="text-gray-400">
-                Foto mobiele torenkraan placeholder
-              </span>
+            <div className="rounded-lg h-80 overflow-hidden">
+              <img
+                src={images.services["mobiele-torenkranen"]}
+                alt="Mobiele torenkraan Winder"
+                className="w-full h-full object-cover"
+              />
             </div>
           </div>
         </div>
@@ -57,11 +68,12 @@ export default function MobieleTorenkranen() {
             Ons aanbod mobiele torenkranen
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-            {craneSpecs.mobieleTorenkranen.map((crane) => (
+            {craneSpecs.mobieleTorenkranen.map((crane, i) => (
               <CraneSpecCard
                 key={crane.name}
                 name={crane.name}
                 description={crane.description}
+                image={craneImages[i]}
                 specs={[
                   { label: "Giekhoogte", value: crane.giekHoogte },
                   { label: "Max hefvermogen", value: crane.maxHefvermogen },

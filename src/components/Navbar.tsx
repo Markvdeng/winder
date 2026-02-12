@@ -38,14 +38,12 @@ export default function Navbar() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-20">
           {/* Logo */}
-          <Link to="/" className="flex items-center gap-3">
-            <span className="font-heading text-3xl tracking-wider">
-              WINDER
-            </span>
-            <span className="hidden sm:block text-xs text-gray-400 leading-tight">
-              Transport &<br />
-              Kraanverhuur
-            </span>
+          <Link to="/" className="flex items-center">
+            <img
+              src="/images/hero/logo.bmp"
+              alt="Winder Transport & Kraanverhuur"
+              className="h-14 w-auto"
+            />
           </Link>
 
           {/* Desktop nav */}

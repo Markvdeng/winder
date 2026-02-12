@@ -2,7 +2,16 @@ import { Link } from "react-router-dom";
 import PageHeader from "@/components/PageHeader";
 import CraneSpecCard from "@/components/CraneSpecCard";
 import { services, craneSpecs } from "@/data/content";
+import { images } from "@/data/images";
 import { CheckCircle } from "lucide-react";
+
+const telescoopImages = [
+  images.telescoopkranen.slides[0],
+  images.telescoopkranen.slides[1],
+  images.telescoopkranen.slides[2],
+  images.telescoopkranen.slides[3],
+  images.telescoopkranen.slides[5],
+];
 
 export default function Telescoopkraan() {
   const service = services.find((s) => s.slug === "telescoopkraan")!;
@@ -16,6 +25,7 @@ export default function Telescoopkraan() {
           { label: "Diensten", to: "/diensten" },
           { label: service.title },
         ]}
+        backgroundImage={images.telescoopBg}
       />
 
       <section className="py-16">
@@ -40,10 +50,12 @@ export default function Telescoopkraan() {
                 Offerte aanvragen
               </Link>
             </div>
-            <div className="bg-gray-100 rounded-lg h-80 flex items-center justify-center">
-              <span className="text-gray-400">
-                Foto telescoopkraan placeholder
-              </span>
+            <div className="rounded-lg h-80 overflow-hidden">
+              <img
+                src={images.telescoopkranen.main}
+                alt="Telescoopkraan Winder"
+                className="w-full h-full object-cover"
+              />
             </div>
           </div>
         </div>
@@ -55,11 +67,12 @@ export default function Telescoopkraan() {
             Ons aanbod telescoopkranen
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {craneSpecs.telescoopkranen.map((crane) => (
+            {craneSpecs.telescoopkranen.map((crane, i) => (
               <CraneSpecCard
                 key={crane.name}
                 name={crane.name}
                 description={crane.description}
+                image={telescoopImages[i]}
                 specs={[
                   { label: "Hefvermogen", value: crane.hefvermogen },
                   { label: "Max giekhoogte", value: crane.maxGiekhoogte },
@@ -70,7 +83,27 @@ export default function Telescoopkraan() {
         </div>
       </section>
 
+      {/* Photo gallery strip */}
       <section className="py-16">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <h2 className="font-heading text-3xl mb-8 text-center">
+            Onze telescoopkranen in actie
+          </h2>
+          <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
+            {images.telescoopkranen.slides.map((src, i) => (
+              <div key={i} className="rounded-lg overflow-hidden aspect-[4/3]">
+                <img
+                  src={src}
+                  alt={`Telescoopkraan in actie ${i + 1}`}
+                  className="w-full h-full object-cover"
+                />
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section className="py-16 bg-winder-gray">
         <div className="max-w-4xl mx-auto px-4 text-center">
           <h2 className="font-heading text-3xl mb-4">
             Werkvoorbereiding nodig?

@@ -2,6 +2,7 @@ import PageHeader from "@/components/PageHeader";
 import LocationCard from "@/components/LocationCard";
 import ContactForm from "@/components/ContactForm";
 import { locations } from "@/data/content";
+import { images } from "@/data/images";
 
 export default function Contact() {
   return (
@@ -10,6 +11,7 @@ export default function Contact() {
         title="Contact"
         subtitle="Neem contact met ons op voor een offerte, advies of meer informatie. Wij helpen u graag verder."
         breadcrumbs={[{ label: "Contact" }]}
+        backgroundImage={images.contactHero}
       />
 
       <section className="py-16">

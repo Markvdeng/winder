@@ -1,5 +1,6 @@
 import PageHeader from "@/components/PageHeader";
 import { company } from "@/data/content";
+import { images } from "@/data/images";
 
 const departments = [
   {
@@ -44,6 +45,7 @@ export default function Organisatie() {
           { label: "Over Ons", to: "/over-ons" },
           { label: "Organisatie" },
         ]}
+        backgroundImage={images.aerialDrone}
       />
 
       <section className="py-16">
@@ -72,8 +74,12 @@ export default function Organisatie() {
       <section className="py-16 bg-winder-gray">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="font-heading text-3xl mb-8">Ons team</h2>
-          <div className="bg-gray-200 rounded-lg h-96 flex items-center justify-center">
-            <span className="text-gray-400">Teamfoto placeholder</span>
+          <div className="rounded-lg h-96 overflow-hidden">
+            <img
+              src={images.about.team1}
+              alt="Het team van Winder"
+              className="w-full h-full object-cover"
+            />
           </div>
           <p className="mt-4 text-gray-600">
             Het team van Winder: {company.employees} professionals die dagelijks

@@ -2,7 +2,14 @@ import { Link } from "react-router-dom";
 import PageHeader from "@/components/PageHeader";
 import CraneSpecCard from "@/components/CraneSpecCard";
 import { services, craneSpecs } from "@/data/content";
+import { images } from "@/data/images";
 import { CheckCircle } from "lucide-react";
+
+const autolaadImages = [
+  images.autolaadkranen["35tm-jib"],
+  images.autolaadkranen["60tm-jib"],
+  images.autolaadkranen["80tm"],
+];
 
 export default function Autolaadkraan() {
   const service = services.find((s) => s.slug === "autolaadkraan")!;
@@ -16,6 +23,7 @@ export default function Autolaadkraan() {
           { label: "Diensten", to: "/diensten" },
           { label: service.title },
         ]}
+        backgroundImage={images.autolaadkraanHero}
       />
 
       <section className="py-16">
@@ -40,10 +48,12 @@ export default function Autolaadkraan() {
                 Offerte aanvragen
               </Link>
             </div>
-            <div className="bg-gray-100 rounded-lg h-80 flex items-center justify-center">
-              <span className="text-gray-400">
-                Foto autolaadkraan placeholder
-              </span>
+            <div className="rounded-lg h-80 overflow-hidden">
+              <img
+                src={images.autolaadkranen.main}
+                alt="Autolaadkraan Winder"
+                className="w-full h-full object-cover"
+              />
             </div>
           </div>
         </div>
@@ -55,16 +65,39 @@ export default function Autolaadkraan() {
             Ons aanbod autolaadkranen
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-            {craneSpecs.autolaadkranen.map((crane) => (
+            {craneSpecs.autolaadkranen.map((crane, i) => (
               <CraneSpecCard
                 key={crane.name}
                 name={crane.name}
                 description={crane.description}
+                image={autolaadImages[i]}
                 specs={[
                   { label: "Bereik", value: crane.bereik },
                   { label: "Hefvermogen", value: crane.hefvermogen },
                 ]}
               />
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Extra photos */}
+      <section className="py-16">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+            {[
+              images.autolaadkranen.main,
+              images.autolaadkranen["60tm-jib"],
+              images.autolaadkranen["60-100tm-semi"],
+              images.autolaadkranen["80tm"],
+            ].map((src, i) => (
+              <div key={i} className="rounded-lg overflow-hidden aspect-[4/3]">
+                <img
+                  src={src}
+                  alt={`Autolaadkraan ${i + 1}`}
+                  className="w-full h-full object-cover"
+                />
+              </div>
             ))}
           </div>
         </div>

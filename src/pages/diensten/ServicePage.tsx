@@ -1,15 +1,18 @@
 import { Link } from "react-router-dom";
 import PageHeader from "@/components/PageHeader";
 import { services } from "@/data/content";
+import { images } from "@/data/images";
 import { CheckCircle } from "lucide-react";
 
 interface ServicePageProps {
   slug: string;
   extraContent?: React.ReactNode;
+  headerBg?: string;
 }
 
-export default function ServicePage({ slug, extraContent }: ServicePageProps) {
+export default function ServicePage({ slug, extraContent, headerBg }: ServicePageProps) {
   const service = services.find((s) => s.slug === slug)!;
+  const serviceImage = images.services[slug];
 
   return (
     <div>
@@ -20,6 +23,7 @@ export default function ServicePage({ slug, extraContent }: ServicePageProps) {
           { label: "Diensten", to: "/diensten" },
           { label: service.title },
         ]}
+        backgroundImage={headerBg || images.aerialDrone}
       />
 
       <section className="py-16">
@@ -45,10 +49,12 @@ export default function ServicePage({ slug, extraContent }: ServicePageProps) {
                 Offerte aanvragen
               </Link>
             </div>
-            <div className="bg-gray-100 rounded-lg h-80 flex items-center justify-center">
-              <span className="text-gray-400">
-                Foto {service.title.toLowerCase()} placeholder
-              </span>
+            <div className="rounded-lg h-80 overflow-hidden">
+              <img
+                src={serviceImage}
+                alt={service.title}
+                className="w-full h-full object-cover"
+              />
             </div>
           </div>
         </div>

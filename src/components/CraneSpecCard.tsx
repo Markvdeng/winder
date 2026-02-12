@@ -2,23 +2,29 @@ interface CraneSpecCardProps {
   name: string;
   description: string;
   specs: { label: string; value: string }[];
+  image?: string;
 }
 
 export default function CraneSpecCard({
   name,
   description,
   specs,
+  image,
 }: CraneSpecCardProps) {
   return (
     <div className="bg-white border border-gray-200 rounded-lg overflow-hidden hover:shadow-lg transition-shadow">
-      {/* Image placeholder */}
-      <div className="bg-gray-100 h-48 flex items-center justify-center">
-        <div className="text-center text-gray-400">
-          <div className="w-16 h-16 mx-auto mb-2 bg-gray-200 rounded-lg flex items-center justify-center">
-            <span className="text-2xl">&#128477;</span>
+      <div className="h-48 overflow-hidden">
+        {image ? (
+          <img
+            src={image}
+            alt={name}
+            className="w-full h-full object-cover"
+          />
+        ) : (
+          <div className="w-full h-full bg-gray-100 flex items-center justify-center">
+            <span className="text-gray-400 text-sm">Foto beschikbaar</span>
           </div>
-          <span className="text-xs">Afbeelding beschikbaar</span>
-        </div>
+        )}
       </div>
 
       <div className="p-6">

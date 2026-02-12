@@ -22,7 +22,7 @@ export default function Index() {
         ctaText="Bekijk onze diensten"
         ctaLink="/diensten"
         secondaryCta={{ text: "Neem contact op", link: "/contact" }}
-        backgroundImage={images.heroHomepage}
+        backgroundImage={images.galleryHero}
       />
 
       {/* Stats bar */}

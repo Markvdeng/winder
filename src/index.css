@@ -69,7 +69,6 @@
   h5,
   h6 {
     font-family: var(--font-heading);
-    text-transform: uppercase;
     letter-spacing: 0.02em;
   }
 

@@ -28,7 +28,7 @@ export default function PageHeader({
             alt=""
             className="absolute inset-0 w-full h-full object-cover"
           />
-          <div className="absolute inset-0 bg-black/70" />
+          <div className="absolute inset-0 bg-black/80" />
         </>
       )}
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">

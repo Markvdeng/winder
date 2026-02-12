@@ -1,0 +1,80 @@
+@import "tailwindcss";
+
+@theme {
+  --color-winder-black: #000000;
+  --color-winder-red: #c4171c;
+  --color-winder-white: #ffffff;
+  --color-winder-gray: #f5f5f5;
+  --color-winder-dark: #1a1a1a;
+
+  --font-heading: "Bebas Neue", sans-serif;
+  --font-body: "Fira Sans", sans-serif;
+}
+
+@layer base {
+  @font-face {
+    font-family: "Bebas Neue";
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+    src: url("https://fonts.gstatic.com/s/bebasneue/v14/JTUSjIg69CK48gW7PXooxW5rygbi49c.woff2")
+      format("woff2");
+  }
+
+  @font-face {
+    font-family: "Fira Sans";
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+    src: url("https://fonts.gstatic.com/s/firasans/v17/va9E4kDNxMZdWfMOD5Vvl4jLazX3dA.woff2")
+      format("woff2");
+  }
+
+  @font-face {
+    font-family: "Fira Sans";
+    font-style: normal;
+    font-weight: 600;
+    font-display: swap;
+    src: url("https://fonts.gstatic.com/s/firasans/v17/va9B4kDNxMZdWfMOD5VnZKveRhf6Xl7Glw.woff2")
+      format("woff2");
+  }
+
+  @font-face {
+    font-family: "Fira Sans";
+    font-style: normal;
+    font-weight: 700;
+    font-display: swap;
+    src: url("https://fonts.gstatic.com/s/firasans/v17/va9B4kDNxMZdWfMOD5VnLKreRhf6Xl7Glw.woff2")
+      format("woff2");
+  }
+
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  body {
+    font-family: var(--font-body);
+    color: var(--color-winder-black);
+    background: var(--color-winder-white);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-family: var(--font-heading);
+    text-transform: uppercase;
+    letter-spacing: 0.02em;
+  }
+
+  a {
+    color: inherit;
+    text-decoration: none;
+  }
+}

@@ -58,8 +58,8 @@ export default function OverOns() {
               </h2>
               <p className="text-gray-600 mb-4">{company.description}</p>
               <p className="text-gray-600 mb-6">
-                Met vestigingen in Hoorn, Middenmeer en Amsterdam zijn wij
-                altijd dichtbij. Ons team van {company.employees} medewerkers
+                Met vestigingen in Alkmaar, Hoorn en Den Helder staan we sterk
+                in Noord-Holland. Ons team van {company.employees} medewerkers
                 staat dagelijks klaar voor onze klanten.
               </p>
               <div className="flex gap-4">

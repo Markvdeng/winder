@@ -80,10 +80,10 @@ export default function ServicePage({ slug, extraContent, headerBg }: ServicePag
               Contact opnemen
             </Link>
             <a
-              href="tel:0229213908"
+              href="tel:0725052344"
               className="px-8 py-3 border-2 border-white text-white font-semibold rounded hover:bg-white hover:text-winder-black transition-colors"
             >
-              Bel 0229-213908
+              Bel 072-5052344
             </a>
           </div>
         </div>

@@ -29,32 +29,32 @@ export default function Contact() {
             <div>
               <h2 className="font-heading text-3xl mb-6">Direct contact</h2>
               <div className="bg-winder-gray rounded-lg p-6 mb-6">
-                <h3 className="font-heading text-xl mb-3">Hoofdkantoor Hoorn</h3>
+                <h3 className="font-heading text-xl mb-3">Vestiging Alkmaar</h3>
                 <div className="space-y-2 text-sm">
                   <p>
                     <strong>Telefoon:</strong>{" "}
                     <a
-                      href="tel:0229213908"
+                      href="tel:0725052344"
                       className="text-winder-red hover:underline"
                     >
-                      0229-213908
+                      072-5052344
                     </a>
                   </p>
                   <p>
                     <strong>E-mail:</strong>{" "}
                     <a
-                      href="mailto:hoorn@winder.nl"
+                      href="mailto:info@winder.nl"
                       className="text-winder-red hover:underline"
                     >
-                      hoorn@winder.nl
+                      info@winder.nl
                     </a>
                   </p>
                   <p>
                     <strong>Adres:</strong>
                     <br />
-                    Gelderseweg 2
+                    Koraalstraat 7
                     <br />
-                    1623 JV Hoorn
+                    1812 RK Alkmaar
                   </p>
                 </div>
               </div>

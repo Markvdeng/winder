@@ -1,9 +1,9 @@
 export const company = {
   name: "Winder",
-  fullName: "Winder Transport & Kraanverhuur",
-  tagline: "Transport & Kraanverhuur sinds 1894",
+  fullName: "Winder Limmen Transport & Kraanverhuur",
+  tagline: "Sinds 1894 een vertrouwd familiebedrijf in transport en kranen",
   description:
-    "Al meer dan 125 jaar is Winder een betrouwbare partner in transport en kraanverhuur in Noord-Holland. Met circa 75-80 medewerkers, 50 trekkers en 15 kranen staan wij garant voor kwaliteit en vakmanschap.",
+    "Winder Limmen is een transport- en kraanverhuurbedrijf gevestigd in Noord-Holland op 3 locaties: Alkmaar, Hoorn en Den Helder, met een indrukwekkende vloot vrachtwagens, autolaadkranen, kranen en torenkranen, ondersteund door een toegewijd team. Als familiebedrijf met een rijke historie die teruggaat tot 1894, beschikken we over uitgebreide specialistische kennis op het gebied van transport-, hijs- logistiek en montageactiviteiten.",
   founded: 1894,
   employees: "75-80",
   trucks: "50+",
@@ -13,31 +13,31 @@ export const company = {
 
 export const locations = [
   {
-    city: "Hoorn",
-    type: "Hoofdkantoor",
-    address: "Gelderseweg 2",
-    postalCode: "1623 JV",
-    phone: "0229-213908",
-    email: "hoorn@winder.nl",
-    description: "Hoofdvestiging met kantoor, werkplaats en propaangas depot.",
+    city: "Alkmaar",
+    type: "Vestiging",
+    address: "Koraalstraat 7",
+    postalCode: "1812 RK",
+    phone: "072-5052344",
+    email: "info@winder.nl",
+    description: "Vestiging Alkmaar met kantoor en werkplaats.",
   },
   {
-    city: "Middenmeer",
+    city: "Den Helder",
     type: "Vestiging",
-    address: "Cultuurweg 4",
-    postalCode: "1775 PV",
-    phone: "0227-501654",
-    email: "middenmeer@winder.nl",
+    address: "Mastenmakersweg 3",
+    postalCode: "1786 PB",
+    phone: "0223-635831",
+    email: "denhelder@winder.nl",
     description: "Vestiging voor transport en op- en overslag.",
   },
   {
-    city: "Amsterdam",
+    city: "Hoorn",
     type: "Vestiging",
-    address: "Westhavenweg 1",
-    postalCode: "1042 AA",
-    phone: "020-6810422",
-    email: "amsterdam@winder.nl",
-    description: "Vestiging in de Amsterdamse haven voor stedelijk transport.",
+    address: "Kernweg 30",
+    postalCode: "1627 LH",
+    phone: "0229-212826",
+    email: "hoorn@winder.nl",
+    description: "Vestiging Hoorn met propaangas depot.",
   },
 ];
 
@@ -176,14 +176,14 @@ export const services: Service[] = [
     slug: "op-en-overslag",
     title: "Op- en Overslag",
     shortDescription:
-      "Op- en overslag faciliteiten op onze locaties in Hoorn en Middenmeer.",
+      "Op- en overslag faciliteiten op onze locaties in Noord-Holland.",
     description:
-      "Winder beschikt over ruime op- en overslag faciliteiten op onze locaties in Hoorn en Middenmeer. Geschikt voor opslag van goederen, materialen en machines.",
+      "Winder beschikt over ruime op- en overslag faciliteiten op onze locaties in Alkmaar, Hoorn en Den Helder. Geschikt voor opslag van goederen, materialen en machines.",
     icon: "warehouse",
     features: [
       "Binnen- en buitenopslag",
       "Beveiligd terrein",
-      "Hoorn en Middenmeer",
+      "Alkmaar, Hoorn en Den Helder",
       "Flexibele opslagperiodes",
     ],
   },
@@ -420,7 +420,7 @@ export const history = {
       year: "1990s",
       title: "Modernisering",
       description:
-        "Investering in modern materieel en opening van de vestiging in Middenmeer.",
+        "Investering in modern materieel en uitbreiding naar meerdere vestigingen.",
     },
     {
       year: "2000s",
@@ -432,14 +432,14 @@ export const history = {
       year: "Vandaag",
       title: "Anno nu",
       description:
-        "Met drie vestigingen, 75-80 medewerkers en een modern wagenpark is Winder een toonaangevend bedrijf in Noord-Holland.",
+        "Met drie vestigingen in Alkmaar, Hoorn en Den Helder en een modern wagenpark is Winder een toonaangevend bedrijf in Noord-Holland.",
     },
   ],
 };
 
 export const about = {
   intro:
-    "Winder Transport & Kraanverhuur is al meer dan 125 jaar een begrip in Noord-Holland. Als familiebedrijf combineren wij de betrouwbaarheid van een traditioneel bedrijf met de innovatie en efficiëntie van een modern logistiek partner.",
+    "Winder Limmen is een transport- en kraanverhuurbedrijf gevestigd in Noord-Holland op 3 locaties: Alkmaar, Hoorn en Den Helder. Als familiebedrijf met een rijke historie die teruggaat tot 1894, beschikken we over uitgebreide specialistische kennis op het gebied van transport-, hijs- logistiek en montageactiviteiten. Met onze vestigingen staan we sterk in Noord-Holland en dient dit als springplank voor operaties die zich uitstrekken over heel Nederland, België, Duitsland en Frankrijk.",
   values: [
     {
       title: "Betrouwbaarheid",

@@ -17,8 +17,8 @@ export default function Index() {
   return (
     <div>
       <Hero
-        title="Transport & Kraanverhuur sinds 1894"
-        subtitle="Al meer dan 125 jaar uw betrouwbare partner in transport en kraanverhuur in Noord-Holland. Winder staat voor kwaliteit, vakmanschap en veiligheid."
+        title="Sinds 1894 een vertrouwd familiebedrijf in transport en kranen"
+        subtitle="Winder Limmen is gevestigd in Noord-Holland op 3 locaties: Alkmaar, Hoorn en Den Helder. Met uitgebreide specialistische kennis op het gebied van transport-, hijs- logistiek en montageactiviteiten."
         ctaText="Bekijk onze diensten"
         ctaLink="/diensten"
         secondaryCta={{ text: "Neem contact op", link: "/contact" }}
@@ -79,8 +79,9 @@ export default function Index() {
                 {company.description}
               </p>
               <p className="text-gray-600 mb-6">
-                Met drie vestigingen in Noord-Holland (Hoorn, Middenmeer en
-                Amsterdam) staan wij altijd dichtbij onze klanten.
+                Met vestigingen in Alkmaar, Hoorn en Den Helder staan we sterk
+                in Noord-Holland en dient dit als springplank voor operaties
+                over heel Nederland, België, Duitsland en Frankrijk.
               </p>
               <div className="flex flex-wrap gap-3 mb-6">
                 {company.certifications.map((cert) => (
@@ -146,10 +147,10 @@ export default function Index() {
               Contact opnemen
             </Link>
             <a
-              href="tel:0229213908"
+              href="tel:0725052344"
               className="px-8 py-3 border-2 border-white text-white font-semibold rounded hover:bg-white hover:text-winder-black transition-colors"
             >
-              Bel 0229-213908
+              Bel 072-5052344
             </a>
           </div>
         </div>

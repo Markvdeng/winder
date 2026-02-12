@@ -2,19 +2,34 @@ import { useState } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { Menu, X, ChevronDown } from "lucide-react";
 
-const dienstenLinks = [
-  { to: "/diensten/mobiele-torenkranen", label: "Mobiele Torenkranen" },
-  { to: "/diensten/telescoopkraan", label: "Telescoopkranen" },
-  { to: "/diensten/autolaadkraan", label: "Autolaadkranen" },
-  { to: "/diensten/transport", label: "Transport" },
-  { to: "/diensten/chalet-transport", label: "Chalet Transport" },
-  { to: "/diensten/adr-transport", label: "ADR Transport" },
-  { to: "/diensten/exceptioneel-transport", label: "Exceptioneel Transport" },
-  { to: "/diensten/pakketdienst", label: "Pakketdienst" },
-  { to: "/diensten/werkvoorbereiding", label: "Werkvoorbereiding" },
-  { to: "/diensten/op-en-overslag", label: "Op- en Overslag" },
-  { to: "/diensten/propaangas-depot", label: "Propaangas Depot" },
-  { to: "/diensten/groupage", label: "Groupage & Distributie" },
+const dienstenSections = [
+  {
+    heading: "Kraanverhuur",
+    links: [
+      { to: "/diensten/autolaadkraan", label: "Autolaadkranen" },
+      { to: "/diensten/mobiele-torenkranen", label: "Mobiele Torenkranen" },
+      { to: "/diensten/telescoopkraan", label: "Telescoopkranen" },
+      { to: "/diensten/werkvoorbereiding", label: "Werkvoorbereiding" },
+    ],
+  },
+  {
+    heading: "Transport",
+    links: [
+      { to: "/diensten/transport", label: "Transport" },
+      { to: "/diensten/chalet-transport", label: "Chalet Transport" },
+      { to: "/diensten/adr-transport", label: "ADR Transport" },
+      { to: "/diensten/exceptioneel-transport", label: "Exceptioneel Transport" },
+      { to: "/diensten/pakketdienst", label: "Pakketdienst" },
+      { to: "/diensten/groupage", label: "Groupage & Distributie" },
+    ],
+  },
+  {
+    heading: "Overig",
+    links: [
+      { to: "/diensten/op-en-overslag", label: "Op- en Overslag" },
+      { to: "/diensten/propaangas-depot", label: "Propaangas Depot" },
+    ],
+  },
 ];
 
 const overOnsLinks = [
@@ -73,17 +88,27 @@ export default function Navbar() {
                 <ChevronDown className="w-3 h-3" />
               </Link>
               {dienstenOpen && (
-                <div className="absolute top-full left-0 bg-winder-black border border-gray-800 rounded-md py-2 min-w-[250px] shadow-xl">
-                  {dienstenLinks.map((link) => (
-                    <Link
-                      key={link.to}
-                      to={link.to}
-                      className={`block px-4 py-2 text-sm hover:bg-gray-900 hover:text-winder-red transition-colors ${
-                        isActive(link.to) ? "text-winder-red" : ""
-                      }`}
-                    >
-                      {link.label}
-                    </Link>
+                <div className="absolute top-full left-0 bg-winder-black border border-gray-800 rounded-md py-2 min-w-[260px] shadow-xl">
+                  {dienstenSections.map((section, si) => (
+                    <div key={section.heading}>
+                      {si > 0 && (
+                        <div className="border-t border-gray-800 my-1" />
+                      )}
+                      <span className="block px-4 py-1.5 text-xs font-semibold text-gray-500 uppercase tracking-wider">
+                        {section.heading}
+                      </span>
+                      {section.links.map((link) => (
+                        <Link
+                          key={link.to}
+                          to={link.to}
+                          className={`block px-4 py-2 text-sm hover:bg-gray-900 hover:text-winder-red transition-colors ${
+                            isActive(link.to) ? "text-winder-red" : ""
+                          }`}
+                        >
+                          {link.label}
+                        </Link>
+                      ))}
+                    </div>
                   ))}
                 </div>
               )}
@@ -173,18 +198,25 @@ export default function Navbar() {
             >
               Diensten
             </Link>
-            <div className="mt-2 ml-4 space-y-1">
-              {dienstenLinks.map((link) => (
-                <Link
-                  key={link.to}
-                  to={link.to}
-                  className="block py-1 text-sm text-gray-400 hover:text-winder-red"
-                  onClick={() => setMobileOpen(false)}
-                >
-                  {link.label}
-                </Link>
-              ))}
-            </div>
+            {dienstenSections.map((section) => (
+              <div key={section.heading} className="mt-3">
+                <span className="block ml-4 text-xs font-semibold text-gray-500 uppercase tracking-wider mb-1">
+                  {section.heading}
+                </span>
+                <div className="ml-4 space-y-1">
+                  {section.links.map((link) => (
+                    <Link
+                      key={link.to}
+                      to={link.to}
+                      className="block py-1 text-sm text-gray-400 hover:text-winder-red"
+                      onClick={() => setMobileOpen(false)}
+                    >
+                      {link.label}
+                    </Link>
+                  ))}
+                </div>
+              </div>
+            ))}
           </div>
           <div className="px-6 py-3">
             <span className="text-sm font-semibold">Over Ons</span>

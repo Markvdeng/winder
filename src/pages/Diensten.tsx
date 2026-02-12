@@ -4,22 +4,20 @@ import { services } from "@/data/content";
 import { images } from "@/data/images";
 
 export default function Diensten() {
-  const kraanDiensten = services.filter((s) =>
-    ["mobiele-torenkranen", "telescoopkraan", "autolaadkraan"].includes(s.slug)
-  );
-  const transportDiensten = services.filter((s) =>
-    [
-      "transport",
-      "chalet-transport",
-      "adr-transport",
-      "exceptioneel-transport",
-      "pakketdienst",
-      "groupage",
-    ].includes(s.slug)
-  );
-  const overigeDiensten = services.filter((s) =>
-    ["werkvoorbereiding", "op-en-overslag", "propaangas-depot"].includes(s.slug)
-  );
+  const kraanSlugs = ["autolaadkraan", "mobiele-torenkranen", "telescoopkraan", "werkvoorbereiding"];
+  const transportSlugs = [
+    "transport",
+    "chalet-transport",
+    "adr-transport",
+    "exceptioneel-transport",
+    "pakketdienst",
+    "groupage",
+  ];
+  const overigeSlugs = ["op-en-overslag", "propaangas-depot"];
+
+  const kraanDiensten = kraanSlugs.map((slug) => services.find((s) => s.slug === slug)!);
+  const transportDiensten = transportSlugs.map((slug) => services.find((s) => s.slug === slug)!);
+  const overigeDiensten = overigeSlugs.map((slug) => services.find((s) => s.slug === slug)!);
 
   return (
     <div>
@@ -36,8 +34,8 @@ export default function Diensten() {
           <div className="mb-16">
             <h2 className="font-heading text-3xl mb-2">Kraanverhuur</h2>
             <p className="text-gray-600 mb-6">
-              Mobiele torenkranen, telescoopkranen en autolaadkranen voor elk
-              hijsproject.
+              Autolaadkranen, mobiele torenkranen en telescoopkranen voor elk
+              hijsproject. Inclusief werkvoorbereiding.
             </p>
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
               {kraanDiensten.map((s) => (
@@ -62,9 +60,9 @@ export default function Diensten() {
 
           {/* Overige diensten */}
           <div>
-            <h2 className="font-heading text-3xl mb-2">Overige Diensten</h2>
+            <h2 className="font-heading text-3xl mb-2">Overige diensten</h2>
             <p className="text-gray-600 mb-6">
-              Werkvoorbereiding, op- en overslag en propaangas.
+              Op- en overslag en propaangas depot.
             </p>
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
               {overigeDiensten.map((s) => (

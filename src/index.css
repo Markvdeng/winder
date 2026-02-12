@@ -7,7 +7,8 @@
   --color-winder-gray: #f5f5f5;
   --color-winder-dark: #1a1a1a;
 
-  --font-heading: "Bebas Neue", sans-serif;
+  --font-heading: "Fira Sans", sans-serif;
+  --font-display: "Bebas Neue", sans-serif;
   --font-body: "Fira Sans", sans-serif;
 }
 
@@ -56,6 +57,8 @@
 
   body {
     font-family: var(--font-body);
+    font-size: 16px;
+    line-height: 1.6;
     color: var(--color-winder-black);
     background: var(--color-winder-white);
     -webkit-font-smoothing: antialiased;
@@ -69,7 +72,8 @@
   h5,
   h6 {
     font-family: var(--font-heading);
-    letter-spacing: 0.02em;
+    font-weight: 700;
+    line-height: 1.2;
   }
 
   a {

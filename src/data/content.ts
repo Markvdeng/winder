@@ -390,49 +390,71 @@ export const vacatures = [
 
 export const history = {
   intro:
-    "Winder is een echt familiebedrijf. Al sinds 1894 zijn wij actief in transport en later ook in kraanverhuur. Wat begon als een klein transportbedrijf in Hoorn is uitgegroeid tot een veelzijdig bedrijf met circa 75-80 medewerkers en drie vestigingen in Noord-Holland.",
+    "De geschiedenis van Winder Limmen gaat terug tot het einde van de 19e eeuw toen voorvader Pieter Winder van beroep veranderde. Van binnenvaartschipper werd hij wegvervoerder met paard en wagen. Wat begon als een klein familiebedrijf groeide uit tot een veelzijdig transport- en kraanverhuurbedrijf met circa 75-80 medewerkers en drie vestigingen in Noord-Holland.",
   milestones: [
     {
       year: "1894",
-      title: "Oprichting",
+      title: "Van binnenvaart naar wegtransport",
       description:
-        "Het bedrijf wordt opgericht in Hoorn als paard-en-wagen transportbedrijf.",
+        "Voorvader Pieter Winder verandert van beroep. Van binnenvaartschipper wordt hij wegvervoerder met paard en wagen. Het fundament van het familiebedrijf is gelegd.",
+      detail:
+        "In het Noord-Hollandse Limmen begint Pieter Winder een transportbedrijf met paard en wagen. Het is het begin van een onderneming die vijf generaties zou overspannen.",
     },
     {
-      year: "1920s",
-      title: "Motorisering",
+      year: "1925",
+      title: "De eerste vrachtwagen",
       description:
-        "De eerste gemotoriseerde vrachtwagens worden aangeschaft. Het bedrijf groeit mee met de tijd.",
+        "Meindert Winder, de een na oudste van het gezin van 12 kinderen, schaft de eerste vrachtwagen aan. Het tijdperk van de levende have komt ten einde.",
+      detail:
+        "Meindert Winder was een vooruitstrevende jongeman die al op jonge leeftijd het bedrijf begon uit te breiden. Samen met zijn broers en zussen werd hard gewerkt aan de groei van het bedrijf. De overstap van paard en wagen naar gemotoriseerd transport markeerde een keerpunt.",
     },
     {
       year: "1950s",
       title: "Naoorlogse groei",
       description:
-        "Na de Tweede Wereldoorlog groeit het bedrijf fors mee met de wederopbouw van Nederland.",
+        "Na de Tweede Wereldoorlog groeit het bedrijf fors mee met de wederopbouw van Nederland. Het materieel wordt groter in aantal en omvang.",
+      detail:
+        "De ontwikkelingen volgden zich snel op. Exceptioneel vervoer, fabrieksverhuizingen en buitenlands vervoer werden aan het dienstenpakket toegevoegd. Elk decennium kende zijn eigen specifieke groei.",
+    },
+    {
+      year: "1960s",
+      title: "Uitbreiding en innovatie",
+      description:
+        "De eerste mobiele kranen worden aangeschaft. Winder begint ook met de fabricage van droogmolens en ontwikkelt zelfstandig rijdende megamagazijn-opleggers.",
+      detail:
+        "Naast transport breidt Winder uit naar kraanverhuur en logistieke dienstverlening. Het bedrijf toont zich innovatief met eigen ontwikkelingen zoals rijdende megamagazijn-opleggers. Lijndiensten en internationale routes worden opgezet.",
     },
     {
       year: "1970s",
-      title: "Start kraanverhuur",
+      title: "Compleet transport- en hijsbedrijf",
       description:
-        "Winder breidt uit naar kraanverhuur en wordt een compleet transport- en hijsbedrijf.",
+        "Winder groeit uit tot een compleet transport- en hijsbedrijf met een breed scala aan diensten, van kraanverhuur tot exceptioneel vervoer.",
+      detail:
+        "Met de groeiende vraag naar gespecialiseerd hijswerk investeert Winder in steeds grotere en modernere kranen. Het bedrijf wordt een vaste naam in de regio Noord-Holland.",
     },
     {
       year: "1990s",
-      title: "Modernisering",
+      title: "Verhuizing van Limmen naar Alkmaar",
       description:
-        "Investering in modern materieel en uitbreiding naar meerdere vestigingen.",
+        "Een emotionele maar noodzakelijke beslissing: de thuisbasis in Limmen wordt verlaten voor een nieuw terrein met moderne bedrijfspanden in Alkmaar.",
+      detail:
+        "De groei van het bedrijf, opkomende bebouwing en wijzigende infrastructuur noodzaakten Winder Limmen om de oorspronkelijke stichtingsplaats te verlaten. Op het nieuwe terrein in Alkmaar kon het bedrijf verder groeien met moderne faciliteiten.",
     },
     {
       year: "2000s",
-      title: "Certificeringen",
+      title: "Certificeringen en professionalisering",
       description:
-        "Behalen van VCA-Petrochemie, F-Pal en andere branche-certificeringen.",
+        "Behalen van VCA-Petrochemie, F-Pal en andere branche-certificeringen. Verdere professionalisering van het bedrijf.",
+      detail:
+        "Winder investeert in veiligheid en kwaliteitsborging. De VCA-Petrochemie certificering opent deuren naar de petrochemische industrie. F-Pal kwalificatie volgt voor de olie- en gasindustrie.",
     },
     {
       year: "Vandaag",
-      title: "Anno nu",
+      title: "Vijf generaties verder",
       description:
-        "Met drie vestigingen in Alkmaar, Hoorn en Den Helder en een modern wagenpark is Winder een toonaangevend bedrijf in Noord-Holland.",
+        "Met drie vestigingen in Alkmaar, Hoorn en Den Helder en een modern wagenpark is Winder een toonaangevend bedrijf in Noord-Holland, met operaties door heel Nederland en daarbuiten.",
+      detail:
+        "Wat begon met een paard en wagen in Limmen is uitgegroeid tot een onderneming met 75-80 medewerkers, 50+ trekkers en 15+ kranen. De vijfde generatie zet de familietraditie voort met dezelfde waarden: betrouwbaarheid, vakmanschap en persoonlijke aandacht.",
     },
   ],
 };

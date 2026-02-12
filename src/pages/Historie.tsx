@@ -1,8 +1,12 @@
+import { useState } from "react";
+import { ChevronDown } from "lucide-react";
 import PageHeader from "@/components/PageHeader";
 import { history } from "@/data/content";
 import { images } from "@/data/images";
 
 export default function Historie() {
+  const [expandedIndex, setExpandedIndex] = useState<number | null>(null);
+
   return (
     <div>
       <PageHeader
@@ -27,26 +31,45 @@ export default function Historie() {
                 <div key={milestone.year} className="relative flex gap-8">
                   {/* Year marker */}
                   <div className="hidden md:flex flex-col items-center">
-                    <div className="w-16 h-16 bg-winder-red text-white rounded-full flex items-center justify-center font-heading text-lg z-10">
+                    <div className="w-16 h-16 bg-winder-red text-white rounded-full flex items-center justify-center font-heading text-lg font-bold z-10">
                       {milestone.year.length <= 5
                         ? milestone.year
-                        : milestone.year.substring(0, 3)}
+                        : milestone.year.substring(0, 4)}
                     </div>
                   </div>
 
                   {/* Content */}
-                  <div
-                    className={`flex-1 bg-white border border-gray-200 rounded-lg p-6 ${
-                      i % 2 === 0 ? "" : "md:ml-4"
-                    }`}
-                  >
-                    <span className="md:hidden text-winder-red font-heading text-lg block mb-1">
+                  <div className="flex-1 bg-white border border-gray-200 rounded-lg p-6 hover:shadow-md transition-shadow">
+                    <span className="md:hidden text-winder-red font-heading text-lg font-bold block mb-1">
                       {milestone.year}
                     </span>
-                    <h3 className="font-heading text-2xl mb-2">
+                    <h3 className="font-heading text-2xl font-bold mb-2">
                       {milestone.title}
                     </h3>
                     <p className="text-gray-600">{milestone.description}</p>
+
+                    {milestone.detail && (
+                      <>
+                        <button
+                          onClick={() =>
+                            setExpandedIndex(expandedIndex === i ? null : i)
+                          }
+                          className="mt-3 inline-flex items-center gap-1 text-sm text-winder-red font-semibold hover:underline"
+                        >
+                          {expandedIndex === i ? "Minder lezen" : "Meer lezen"}
+                          <ChevronDown
+                            className={`w-4 h-4 transition-transform ${
+                              expandedIndex === i ? "rotate-180" : ""
+                            }`}
+                          />
+                        </button>
+                        {expandedIndex === i && (
+                          <p className="mt-3 text-gray-500 text-sm leading-relaxed border-t border-gray-100 pt-3">
+                            {milestone.detail}
+                          </p>
+                        )}
+                      </>
+                    )}
                   </div>
                 </div>
               ))}
@@ -58,7 +81,7 @@ export default function Historie() {
       {/* Historic photo section */}
       <section className="py-16 bg-winder-gray">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="font-heading text-3xl mb-8 text-center">
+          <h2 className="font-heading text-3xl font-bold mb-8 text-center">
             Door de jaren heen
           </h2>
           <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
